@@ -7,151 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F0F032A21CF7ECF000F1209 /* Planets.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F032821CF7ECF000F1209 /* Planets.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F0F035521CF8AA5000F1209 /* PlanetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */; };
-		6F0F035721CF8B10000F1209 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */; };
-		6F0F03A921D017F7000F1209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F03A821D017F7000F1209 /* Common.framework */; };
-		6F0F03AD21D01845000F1209 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F03AC21D01845000F1209 /* Network.framework */; };
+		6F0F039C21D016DE000F1209 /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F039A21D016DE000F1209 /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		193AFBC3E3C43E78DD56A8C3 /* libPods-Planets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Planets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F032521CF7ECF000F1209 /* Planets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Planets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F032821CF7ECF000F1209 /* Planets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Planets.h; sourceTree = "<group>"; };
-		6F0F032921CF7ECF000F1209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCoordinator.swift; sourceTree = "<group>"; };
-		6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
-		6F0F037121D01460000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F038B21D0165C000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A421D01717000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A621D01717000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A821D017F7000F1209 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03AA21D01845000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03AC21D01845000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0F039721D016DE000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0F039A21D016DE000F1209 /* Model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		6F0F039B21D016DE000F1209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6F0F032221CF7ECF000F1209 /* Frameworks */ = {
+		6F0F039421D016DE000F1209 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0F03AD21D01845000F1209 /* Network.framework in Frameworks */,
-				6F0F03A921D017F7000F1209 /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		674BCB9FEB40CC9EE0B027CD /* Frameworks */ = {
+		6F0F038D21D016DE000F1209 = {
 			isa = PBXGroup;
 			children = (
-				6F0F03AA21D01845000F1209 /* Model.framework */,
-				6F0F03AC21D01845000F1209 /* Network.framework */,
-				6F0F03A821D017F7000F1209 /* Common.framework */,
-				6F0F03A421D01717000F1209 /* Model.framework */,
-				6F0F03A621D01717000F1209 /* Network.framework */,
-				6F0F038B21D0165C000F1209 /* Network.framework */,
-				6F0F037121D01460000F1209 /* Model.framework */,
-				193AFBC3E3C43E78DD56A8C3 /* libPods-Planets.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6F0F031B21CF7ECF000F1209 = {
-			isa = PBXGroup;
-			children = (
-				6F0F032721CF7ECF000F1209 /* Planets */,
-				6F0F032621CF7ECF000F1209 /* Products */,
-				674BCB9FEB40CC9EE0B027CD /* Frameworks */,
+				6F0F039921D016DE000F1209 /* Model */,
+				6F0F039821D016DE000F1209 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6F0F032621CF7ECF000F1209 /* Products */ = {
+		6F0F039821D016DE000F1209 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F0F032521CF7ECF000F1209 /* Planets.framework */,
+				6F0F039721D016DE000F1209 /* Model.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6F0F032721CF7ECF000F1209 /* Planets */ = {
+		6F0F039921D016DE000F1209 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6F0F032821CF7ECF000F1209 /* Planets.h */,
-				6F0F032921CF7ECF000F1209 /* Info.plist */,
-				6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */,
-				6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */,
+				6F0F039A21D016DE000F1209 /* Model.h */,
+				6F0F039B21D016DE000F1209 /* Info.plist */,
 			);
-			path = Planets;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6F0F032021CF7ECF000F1209 /* Headers */ = {
+		6F0F039221D016DE000F1209 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0F032A21CF7ECF000F1209 /* Planets.h in Headers */,
+				6F0F039C21D016DE000F1209 /* Model.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6F0F032421CF7ECF000F1209 /* Planets */ = {
+		6F0F039621D016DE000F1209 /* Model */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F0F032D21CF7ECF000F1209 /* Build configuration list for PBXNativeTarget "Planets" */;
+			buildConfigurationList = 6F0F039F21D016DE000F1209 /* Build configuration list for PBXNativeTarget "Model" */;
 			buildPhases = (
-				6F0F032021CF7ECF000F1209 /* Headers */,
-				6F0F032121CF7ECF000F1209 /* Sources */,
-				6F0F032221CF7ECF000F1209 /* Frameworks */,
-				6F0F032321CF7ECF000F1209 /* Resources */,
+				6F0F039221D016DE000F1209 /* Headers */,
+				6F0F039321D016DE000F1209 /* Sources */,
+				6F0F039421D016DE000F1209 /* Frameworks */,
+				6F0F039521D016DE000F1209 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Planets;
-			productName = Planets;
-			productReference = 6F0F032521CF7ECF000F1209 /* Planets.framework */;
+			name = Model;
+			productName = Model;
+			productReference = 6F0F039721D016DE000F1209 /* Model.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6F0F031C21CF7ECF000F1209 /* Project object */ = {
+		6F0F038E21D016DE000F1209 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jidoka BVBA";
 				TargetAttributes = {
-					6F0F032421CF7ECF000F1209 = {
+					6F0F039621D016DE000F1209 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
 					};
 				};
 			};
-			buildConfigurationList = 6F0F031F21CF7ECF000F1209 /* Build configuration list for PBXProject "Planets" */;
+			buildConfigurationList = 6F0F039121D016DE000F1209 /* Build configuration list for PBXProject "Model" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 6F0F031B21CF7ECF000F1209;
-			productRefGroup = 6F0F032621CF7ECF000F1209 /* Products */;
+			mainGroup = 6F0F038D21D016DE000F1209;
+			productRefGroup = 6F0F039821D016DE000F1209 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F0F032421CF7ECF000F1209 /* Planets */,
+				6F0F039621D016DE000F1209 /* Model */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6F0F032321CF7ECF000F1209 /* Resources */ = {
+		6F0F039521D016DE000F1209 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -161,19 +126,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6F0F032121CF7ECF000F1209 /* Sources */ = {
+		6F0F039321D016DE000F1209 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0F035721CF8B10000F1209 /* PlanetsViewController.swift in Sources */,
-				6F0F035521CF8AA5000F1209 /* PlanetsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		6F0F032B21CF7ECF000F1209 /* Debug */ = {
+		6F0F039D21D016DE000F1209 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +168,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -225,11 +188,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -237,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		6F0F032C21CF7ECF000F1209 /* Release */ = {
+		6F0F039E21D016DE000F1209 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +232,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -283,93 +246,91 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		6F0F032E21CF7ECF000F1209 /* Debug */ = {
+		6F0F03A021D016DE000F1209 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M4HKFCH4TS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Planets/Info.plist;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Model/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.jidoka.Planets;
+				PRODUCT_BUNDLE_IDENTIFIER = be.jidoka.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6F0F032F21CF7ECF000F1209 /* Release */ = {
+		6F0F03A121D016DE000F1209 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M4HKFCH4TS;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Planets/Info.plist;
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Model/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = be.jidoka.Planets;
+				PRODUCT_BUNDLE_IDENTIFIER = be.jidoka.Model;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6F0F031F21CF7ECF000F1209 /* Build configuration list for PBXProject "Planets" */ = {
+		6F0F039121D016DE000F1209 /* Build configuration list for PBXProject "Model" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F0F032B21CF7ECF000F1209 /* Debug */,
-				6F0F032C21CF7ECF000F1209 /* Release */,
+				6F0F039D21D016DE000F1209 /* Debug */,
+				6F0F039E21D016DE000F1209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F0F032D21CF7ECF000F1209 /* Build configuration list for PBXNativeTarget "Planets" */ = {
+		6F0F039F21D016DE000F1209 /* Build configuration list for PBXNativeTarget "Model" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F0F032E21CF7ECF000F1209 /* Debug */,
-				6F0F032F21CF7ECF000F1209 /* Release */,
+				6F0F03A021D016DE000F1209 /* Debug */,
+				6F0F03A121D016DE000F1209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6F0F031C21CF7ECF000F1209 /* Project object */;
+	rootObject = 6F0F038E21D016DE000F1209 /* Project object */;
 }

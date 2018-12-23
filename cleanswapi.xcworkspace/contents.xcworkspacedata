@@ -14,4 +14,13 @@
    <FileRef
       location = "group:Common/Common.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Model/Model.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Network/Network.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
