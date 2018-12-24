@@ -9,12 +9,12 @@
 import Foundation
 import Services
 
-protocol HasAPIClient {
+public protocol HasAPIClient {
     var apiClient: APIClient { get }
 }
 
 public struct AppDependency: HasAPIClient {
-    let apiClient: APIClient
+    public let apiClient: APIClient
     
     public init(apiClient: APIClient) {
         self.apiClient = apiClient

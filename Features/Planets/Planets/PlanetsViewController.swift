@@ -16,7 +16,24 @@ protocol PlanetsViewControllerDelegate: class {
 
 class PlanetsViewController : UIViewController {
     
+    //MARK: - Properties
+    
+    private let viewModel: PlanetsViewModel
     weak var delegate: PlanetsViewControllerDelegate?
+    
+    //MARK: - Init
+    
+    init(viewModel: PlanetsViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -39,7 +39,8 @@ open class PlanetsCoordinator : Coordinator {
     //MARK: 
     
     open override func start() {
-        let planetsViewController = PlanetsViewController()
+        let viewModel = PlanetsViewModel(dependencies: self.appDependency)
+        let planetsViewController = PlanetsViewController(viewModel: viewModel)
         planetsViewController.delegate = self
         
         self.navigationController.pushViewController(planetsViewController, animated: true)
