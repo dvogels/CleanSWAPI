@@ -8,12 +8,23 @@
 
 import Foundation
 import Common
+import Model
 
 class PlanetsViewModel {
     
     typealias Dependencies = HasAPIClient
+    typealias RefreshHandler = () -> Void
+    
+    //MARK: - Properties
     
     private let dependencies: Dependencies
+    var planets: [Planet] = []
+    
+    //MARK: - Closures
+    
+    var refreshHandler: RefreshHandler = {}
+    
+    //MARK: - Init
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -24,7 +35,15 @@ class PlanetsViewModel {
 extension PlanetsViewModel {
     
     func fetchPlanets() {
-        
+        dependencies.apiClient.getPlanets { [weak self] planets in
+            guard let s = self else {
+                return
+            }
+            
+            s.planets = planets
+            s.refreshHandler()
+            
+        }
     }
     
 }

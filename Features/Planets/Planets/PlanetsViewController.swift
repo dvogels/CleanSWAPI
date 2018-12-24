@@ -14,7 +14,7 @@ protocol PlanetsViewControllerDelegate: class {
     
 }
 
-class PlanetsViewController : UIViewController {
+class PlanetsViewController : UITableViewController {
     
     //MARK: - Properties
     
@@ -26,7 +26,7 @@ class PlanetsViewController : UIViewController {
     init(viewModel: PlanetsViewModel) {
         self.viewModel = viewModel
         
-        super.init(nibName: nil, bundle: nil)
+        super.init(style: .plain)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,12 +38,47 @@ class PlanetsViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .purple
+        self.navigationController?.title = "Planets"
+        
+        tableView.allowsSelection = false
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        
+        viewModel.refreshHandler = { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.fetchPlanets()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         delegate?.controllerWillDissappear(self)
+    }
+    
+}
+
+// MARK: - UITableViewDataSource
+
+extension PlanetsViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.planets.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        
+        cell.textLabel?.text = viewModel.planets[indexPath.row].name
+        
+        return cell
     }
     
 }
