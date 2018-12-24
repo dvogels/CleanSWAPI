@@ -10,24 +10,14 @@
 		6F0F032A21CF7ECF000F1209 /* Planets.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F032821CF7ECF000F1209 /* Planets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0F035521CF8AA5000F1209 /* PlanetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */; };
 		6F0F035721CF8B10000F1209 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */; };
-		6F0F03A921D017F7000F1209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F03A821D017F7000F1209 /* Common.framework */; };
-		6F0F03AD21D01845000F1209 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F03AC21D01845000F1209 /* Network.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		193AFBC3E3C43E78DD56A8C3 /* libPods-Planets.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Planets.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0F032521CF7ECF000F1209 /* Planets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Planets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0F032821CF7ECF000F1209 /* Planets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Planets.h; sourceTree = "<group>"; };
 		6F0F032921CF7ECF000F1209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCoordinator.swift; sourceTree = "<group>"; };
 		6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
-		6F0F037121D01460000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F038B21D0165C000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A421D01717000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A621D01717000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03A821D017F7000F1209 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03AA21D01845000F1209 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F0F03AC21D01845000F1209 /* Network.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Network.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,35 +25,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F0F03AD21D01845000F1209 /* Network.framework in Frameworks */,
-				6F0F03A921D017F7000F1209 /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		674BCB9FEB40CC9EE0B027CD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6F0F03AA21D01845000F1209 /* Model.framework */,
-				6F0F03AC21D01845000F1209 /* Network.framework */,
-				6F0F03A821D017F7000F1209 /* Common.framework */,
-				6F0F03A421D01717000F1209 /* Model.framework */,
-				6F0F03A621D01717000F1209 /* Network.framework */,
-				6F0F038B21D0165C000F1209 /* Network.framework */,
-				6F0F037121D01460000F1209 /* Model.framework */,
-				193AFBC3E3C43E78DD56A8C3 /* libPods-Planets.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6F0F031B21CF7ECF000F1209 = {
 			isa = PBXGroup;
 			children = (
 				6F0F032721CF7ECF000F1209 /* Planets */,
 				6F0F032621CF7ECF000F1209 /* Products */,
-				674BCB9FEB40CC9EE0B027CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
