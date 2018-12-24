@@ -20,3 +20,11 @@ class PlanetsViewModel {
     }
     
 }
+
+extension PlanetsViewModel {
+    
+    func fetchPlanets() {
+        
+    }
+    
+}
