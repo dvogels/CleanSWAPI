@@ -157,6 +157,17 @@ playground.xcworkspace
 
 # End of https://www.gitignore.io/api/xcode,swift,cocoapods,objective-c
 
+*.xcworkspacedata
+
+*.xcuserstate
+
+*.xcscheme
+
+xcschememanagement.plist
+
+*.xcbkptlist
+
+
 #Bundler
 .bundle
 vendor
