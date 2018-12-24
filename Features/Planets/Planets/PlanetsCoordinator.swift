@@ -17,15 +17,12 @@ public protocol PlanetsCoordinatorDelegate: class {
 
 open class PlanetsCoordinator : Coordinator {
     
-    //MARK: Private Properties
+    //MARK: - Properties
     
     private let navigationController: UINavigationController
-    
-    //MARK: Public Properties
-    
     public weak var delegate: PlanetsCoordinatorDelegate?
     
-    //MARK: Init
+    //MARK: - Init
     
     public init(navigationController: UINavigationController, appDependency: AppDependency) {
         self.navigationController = navigationController
@@ -36,7 +33,7 @@ open class PlanetsCoordinator : Coordinator {
         NSLog("💥 PlanetsCoordinator 💥", "")
     }
     
-    //MARK: 
+    //MARK: - Methods
     
     open override func start() {
         let viewModel = PlanetsViewModel(dependencies: self.appDependency)
@@ -51,6 +48,8 @@ open class PlanetsCoordinator : Coordinator {
     }
     
 }
+
+//MARK: - PlanetsViewControllerDelegate
 
 extension PlanetsCoordinator: PlanetsViewControllerDelegate {
     
