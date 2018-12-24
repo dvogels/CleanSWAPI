@@ -9,8 +9,14 @@
 open class Coordinator: NSObject {
     
     private(set) var childCoordinators: [Coordinator] = []
+    
+    public let appDependency: AppDependency
+    
+    public init(appDependency: AppDependency) {
+        self.appDependency = appDependency
         
-    public override init() {}
+        super.init()
+    }
     
     open func start() {
         preconditionFailure("This method needs to be overriden by concrete subclass.")

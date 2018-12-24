@@ -14,7 +14,7 @@ extension AppCoordinator : MenuViewControllerDelegate {
     func controller(_ controller: MenuViewController, didTap menuItem: MenuItem) {
         switch menuItem {
         case .planets:
-            let planetsCoordinator = PlanetsCoordinator(navigationController: self.navigationController)
+            let planetsCoordinator = PlanetsCoordinator(navigationController: self.navigationController, appDependency: self.appDependency)
             planetsCoordinator.delegate = self
             self.addChildCoordinator(planetsCoordinator)
             planetsCoordinator.start()

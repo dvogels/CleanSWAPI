@@ -27,9 +27,9 @@ open class PlanetsCoordinator : Coordinator {
     
     //MARK: Init
     
-    public init(navigationController: UINavigationController) {
+    public init(navigationController: UINavigationController, appDependency: AppDependency) {
         self.navigationController = navigationController
-        super.init()
+        super.init(appDependency: appDependency)
     }
     
     deinit {

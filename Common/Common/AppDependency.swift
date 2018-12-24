@@ -15,4 +15,9 @@ protocol HasAPIClient {
 
 public struct AppDependency: HasAPIClient {
     let apiClient: APIClient
+    
+    public init(apiClient: APIClient) {
+        self.apiClient = apiClient
+    }
+    
 }

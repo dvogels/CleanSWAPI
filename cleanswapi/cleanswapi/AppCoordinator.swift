@@ -17,13 +17,13 @@ class AppCoordinator: Coordinator {
     
     // MARK: - Coordinator
     
-    init(window: UIWindow?) {
+    init(window: UIWindow?, appDependency: AppDependency) {
         self.window = window
         
         let menuViewController = MenuViewController()
         self.navigationController = UINavigationController(rootViewController: menuViewController)
         
-        super.init()
+        super.init(appDependency: appDependency)
         
         menuViewController.delegate = self
     }
