@@ -32,18 +32,20 @@ class PlanetsViewModel {
     
 }
 
+//MARK: - Networking
+
 extension PlanetsViewModel {
     
     func fetchPlanets() {
-        dependencies.apiClient.getPlanets { [weak self] planets in
-            guard let s = self else {
-                return
+        dependencies.apiClient.planets(
+            successHandler: { [weak self] planets in
+                self?.planets = planets
+                self?.refreshHandler()
+            },
+            failureHandler: { _ in
+                //TODO: error handling with states
             }
-            
-            s.planets = planets
-            s.refreshHandler()
-            
-        }
+        )
     }
     
 }

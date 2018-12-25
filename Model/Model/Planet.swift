@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Planet {
+public struct Planet: Decodable {
     public let name: String
     
     public init(name: String) {
