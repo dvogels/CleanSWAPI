@@ -18,14 +18,13 @@ class PlanetsViewModel {
     //MARK: - Properties
     
     private let dependencies: Dependencies
-    
-    var currentPage: Page<Planet>?
-    
     var state: State<Planet> = .loading {
         didSet {
             refreshHandler()
         }
     }
+    
+    private var pages: [Page<Planet>] = []
     
     //MARK: - Closures
     
@@ -45,23 +44,39 @@ extension PlanetsViewModel {
     
     func fetchPlanets() {
         state = .loading
-        dependencies.apiClient.planets(page: currentPage?.next ?? 1,
-            successHandler: { [weak self] page in
-                guard let s = self else {
-                    return
-                }
-                
-                s.currentPage = page
-                s.state = page.hasResults ? .populated(page.results) : .empty
+        loadPage(page: 1)
+    }
+    
+    func loadPage(page: Int) {
+        dependencies.apiClient.planets(page: page,
+                                       successHandler: { [weak self] loadedPage in
+                                        guard let s = self else {
+                                            return
+                                        }
+                                        
+                                        if loadedPage.hasResults {
+                                            s.pages.append(loadedPage)
+                                            s.state = .populated(s.pages)
+                                        } else if s.pages.count > 0 {
+                                            s.state = .populated(s.pages)
+                                        } else {
+                                            s.state = .empty
+                                        }
             },
-            failureHandler: { [weak self] error in
-                guard let s = self else {
-                    return
-                }
-                
-                s.state = .error(error)
+                                       failureHandler: { [weak self] error in
+                                        guard let s = self else {
+                                            return
+                                        }
+                                        
+                                        s.state = .error(error)
             }
         )
+    }
+    
+    func loadNextPageWhenNeeded() {
+        if case .populated(let pages) = state, let page = pages.last, let nextPage = page.next {
+            loadPage(page: nextPage)
+        }
     }
     
 }

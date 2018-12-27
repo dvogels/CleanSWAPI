@@ -108,6 +108,11 @@ extension PlanetsViewController {
         
         cell.textLabel?.text = viewModel.state.objects[indexPath.row].name
         
+        let isLastRow = indexPath.row == viewModel.state.objects.count - 1
+        if isLastRow {
+            viewModel.loadNextPageWhenNeeded()
+        }
+        
         return cell
     }
     
