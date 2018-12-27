@@ -9,6 +9,7 @@ import Model
 
 public enum State<T> where T : Decodable {
     case loading
+    case paging([Page<T>])
     case populated([Page<T>])
     case empty
     case error(Error)
@@ -19,6 +20,8 @@ public extension State {
     
     var objects: [T] {
         switch self {
+        case .paging(let pages):
+            return pages.flatMap { $0.results }
         case .populated(let pages):
             return pages.flatMap { $0.results }
         default:

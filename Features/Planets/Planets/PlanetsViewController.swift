@@ -67,7 +67,7 @@ extension PlanetsViewController {
     
     func refresh() {
         switch viewModel.state {
-        case .loading:
+        case .loading, .paging:
             let loadingView = UIActivityIndicatorView()
             loadingView.style = .gray
             loadingView.startAnimating()

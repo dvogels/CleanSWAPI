@@ -75,6 +75,7 @@ extension PlanetsViewModel {
     
     func loadNextPageWhenNeeded() {
         if case .populated(let pages) = state, let page = pages.last, let nextPage = page.next {
+            state = .paging(pages)
             loadPage(page: nextPage)
         }
     }
