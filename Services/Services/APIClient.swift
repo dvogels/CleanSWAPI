@@ -11,6 +11,8 @@ import Alamofire
 
 open class APIClient {
     
+    public let baseURLString = "https://swapi.co/api/"
+    
     public init() {}
 }
 

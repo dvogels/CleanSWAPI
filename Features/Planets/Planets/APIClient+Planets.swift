@@ -69,7 +69,7 @@ extension APIClient {
     typealias SuccessHandler = (Page<Planet>) -> Void
     
     func planets(page: Int, successHandler: @escaping SuccessHandler, failureHandler: @escaping FailureHandler) {
-        let urlRequest = URLRequest(url: URL(string: "https://swapi.co/api/planets/?page=\(page)")!)
+        let urlRequest = URLRequest(url: URL(string: "\(baseURLString)planets/?page=\(page)")!)
         self.doRequest(urlRequest: urlRequest,
                        successHandler: { (page: Page<Planet>) in successHandler(page) },
                        failureHandler: failureHandler)
