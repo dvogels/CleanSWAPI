@@ -66,12 +66,12 @@ import Model
 
 extension APIClient {
     
-    typealias SuccessHandler = ([Planet]) -> Void
+    typealias SuccessHandler = (Page<Planet>) -> Void
     
-    func planets(successHandler: @escaping SuccessHandler, failureHandler: @escaping FailureHandler) {
-        let urlRequest = URLRequest(url: URL(string: "https://swapi.co/api/planets/")!)
+    func planets(page: Int, successHandler: @escaping SuccessHandler, failureHandler: @escaping FailureHandler) {
+        let urlRequest = URLRequest(url: URL(string: "https://swapi.co/api/planets/?page=\(page)")!)
         self.doRequest(urlRequest: urlRequest,
-                       successHandler: { (page: Page<Planet>) in successHandler(page.results) },
+                       successHandler: { (page: Page<Planet>) in successHandler(page) },
                        failureHandler: failureHandler)
     }
     

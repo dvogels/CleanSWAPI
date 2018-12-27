@@ -19,6 +19,8 @@ class PlanetsViewModel {
     
     private let dependencies: Dependencies
     
+    var currentPage: Page<Planet>?
+    
     var state: State<Planet> = .loading {
         didSet {
             refreshHandler()
@@ -43,12 +45,21 @@ extension PlanetsViewModel {
     
     func fetchPlanets() {
         state = .loading
-        dependencies.apiClient.planets(
-            successHandler: { [weak self] planets in
-                self?.state = planets.count > 0 ? .populated(planets) : .empty
+        dependencies.apiClient.planets(page: currentPage?.next ?? 1,
+            successHandler: { [weak self] page in
+                guard let s = self else {
+                    return
+                }
+                
+                s.currentPage = page
+                s.state = page.hasResults ? .populated(page.results) : .empty
             },
             failureHandler: { [weak self] error in
-                self?.state = .error(error)
+                guard let s = self else {
+                    return
+                }
+                
+                s.state = .error(error)
             }
         )
     }
