@@ -10,67 +10,24 @@ import Foundation
 import Services
 import Model
 
-/*private enum Router: URLRequestConvertible {
- static let baseURLString = "https://swapi.co/api/"
- 
- case planets(Int?)
- 
- func asURLRequest() throws -> URLRequest {
- var method: HTTPMethod {
- switch self {
- case .planets:
- return .get
- }
- }
- 
- let params: ([String: Any]?) = {
- switch self {
- case .planets:
- return nil
- }
- }()
- 
- let url: URL = {
- // build up and return the URL for each endpoint
- let relativePath: String?
- switch self {
- case .planets(let identifier):
- if let identifier = identifier {
- relativePath = "planets/\(identifier)"
- } else {
- relativePath = "planets/"
- }
- }
- 
- var url = URL(string: Router.baseURLString)!
- if let relativePath = relativePath {
- url = url.appendingPathComponent(relativePath)
- }
- return url
- }()
- 
- var urlRequest = URLRequest(url: url)
- urlRequest.httpMethod = method.rawValue
- 
- let encoding: ParameterEncoding = {
- switch method {
- case .get:
- return URLEncoding.default
- default:
- return JSONEncoding.default
- }
- }()
- return try encoding.encode(urlRequest, with: params)
- }
- }*/
+private enum Router {
+    
+    case planets(Int)
+    
+    func asURLRequest() -> URLRequest {
+        switch self {
+        case .planets(let page):
+            return URLRequest(url: URL(string: "\(APIClient.baseURLString)planets/?page=\(page)")!)
+        }
+    }
+}
 
 extension APIClient {
     
     typealias SuccessHandler = (Page<Planet>) -> Void
     
     func planets(page: Int, successHandler: @escaping SuccessHandler, failureHandler: @escaping FailureHandler) {
-        let urlRequest = URLRequest(url: URL(string: "\(baseURLString)planets/?page=\(page)")!)
-        self.doRequest(urlRequest: urlRequest,
+        self.doRequest(urlRequest: Router.planets(page).asURLRequest(),
                        successHandler: { (page: Page<Planet>) in successHandler(page) },
                        failureHandler: failureHandler)
     }
