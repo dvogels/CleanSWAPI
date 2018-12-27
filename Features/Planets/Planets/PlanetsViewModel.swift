@@ -18,7 +18,12 @@ class PlanetsViewModel {
     //MARK: - Properties
     
     private let dependencies: Dependencies
-    var planets: [Planet] = []
+    
+    var state: State<Planet> = .loading {
+        didSet {
+            refreshHandler()
+        }
+    }
     
     //MARK: - Closures
     
@@ -37,13 +42,13 @@ class PlanetsViewModel {
 extension PlanetsViewModel {
     
     func fetchPlanets() {
+        state = .loading
         dependencies.apiClient.planets(
             successHandler: { [weak self] planets in
-                self?.planets = planets
-                self?.refreshHandler()
+                self?.state = planets.count > 0 ? .populated(planets) : .empty
             },
-            failureHandler: { _ in
-                //TODO: error handling with states
+            failureHandler: { [weak self] error in
+                self?.state = .error(error)
             }
         )
     }

@@ -38,13 +38,13 @@ class PlanetsViewController : UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.title = "Planets"
+        self.navigationItem.title = "Planets"
         
         tableView.allowsSelection = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         
         viewModel.refreshHandler = { [weak self] in
-            self?.tableView.reloadData()
+            self?.refresh()
         }
     }
     
@@ -61,6 +61,36 @@ class PlanetsViewController : UITableViewController {
     
 }
 
+//MARK: - Methods
+
+extension PlanetsViewController {
+    
+    func refresh() {
+        switch viewModel.state {
+        case .loading:
+            let loadingView = UIActivityIndicatorView()
+            loadingView.style = .gray
+            loadingView.startAnimating()
+            tableView.tableFooterView = loadingView
+        case .populated:
+            tableView.tableFooterView = UIView()
+        case .empty:
+            let emptyView = UIView()
+            emptyView.frame = tableView.frame
+            emptyView.backgroundColor = .blue
+            tableView.tableFooterView = emptyView
+        case .error(_):
+            let errorView = UIView()
+            errorView.backgroundColor = .red
+            errorView.frame = tableView.frame
+            tableView.tableFooterView = errorView
+        }
+        
+        tableView.reloadData()
+    }
+    
+}
+
 // MARK: - UITableViewDataSource
 
 extension PlanetsViewController {
@@ -70,13 +100,13 @@ extension PlanetsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.planets.count
+        return viewModel.state.objects.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
-        cell.textLabel?.text = viewModel.planets[indexPath.row].name
+        cell.textLabel?.text = viewModel.state.objects[indexPath.row].name
         
         return cell
     }
