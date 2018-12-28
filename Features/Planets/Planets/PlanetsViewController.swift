@@ -114,12 +114,14 @@ extension PlanetsViewController {
         
         cell.textLabel?.text = viewModel.state.objects[indexPath.row].name
         
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let isLastRow = indexPath.row == viewModel.state.objects.count - 1
         if isLastRow {
             viewModel.loadNextPageWhenNeeded()
         }
-        
-        return cell
     }
     
 }
