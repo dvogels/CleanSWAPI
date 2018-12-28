@@ -23,7 +23,7 @@ In your terminal, go to the project directory
 - Install Bundler if this gem is not installed yet :
 
 ```
-gem install Bundler
+gem install bundler
 ```
 
 - Install all gems locally in the vendor/bundle directory
