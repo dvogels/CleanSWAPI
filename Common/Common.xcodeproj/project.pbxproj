@@ -10,6 +10,9 @@
 		6F0F034821CF81B1000F1209 /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F034621CF81B1000F1209 /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0F034F21CF81EE000F1209 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F034E21CF81EE000F1209 /* Coordinator.swift */; };
 		6F45A1AA21D4BBB9001FF67A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1A921D4BBB9001FF67A /* State.swift */; };
+		6F45A1AC21D602C5001FF67A /* UITableViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1AB21D602C5001FF67A /* UITableViewController+Common.swift */; };
+		6F45A1AE21D605BF001FF67A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1AD21D605BF001FF67A /* ErrorView.swift */; };
+		6F45A1B021D606E6001FF67A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1AF21D606E6001FF67A /* EmptyView.swift */; };
 		6F8B1BFB21D0CAD90067C14A /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B1BFA21D0CAD90067C14A /* Services.framework */; };
 		6F8B1BFD21D0CB090067C14A /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1BFC21D0CB090067C14A /* AppDependency.swift */; };
 /* End PBXBuildFile section */
@@ -20,6 +23,9 @@
 		6F0F034721CF81B1000F1209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0F034E21CF81EE000F1209 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6F45A1A921D4BBB9001FF67A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		6F45A1AB21D602C5001FF67A /* UITableViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Common.swift"; sourceTree = "<group>"; };
+		6F45A1AD21D605BF001FF67A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		6F45A1AF21D606E6001FF67A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		6F8B1BFA21D0CAD90067C14A /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1BFC21D0CB090067C14A /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +67,9 @@
 				6F0F034E21CF81EE000F1209 /* Coordinator.swift */,
 				6F8B1BFC21D0CB090067C14A /* AppDependency.swift */,
 				6F45A1A921D4BBB9001FF67A /* State.swift */,
+				6F45A1AB21D602C5001FF67A /* UITableViewController+Common.swift */,
+				6F45A1AD21D605BF001FF67A /* ErrorView.swift */,
+				6F45A1AF21D606E6001FF67A /* EmptyView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -152,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F45A1AE21D605BF001FF67A /* ErrorView.swift in Sources */,
 				6F8B1BFD21D0CB090067C14A /* AppDependency.swift in Sources */,
 				6F0F034F21CF81EE000F1209 /* Coordinator.swift in Sources */,
+				6F45A1AC21D602C5001FF67A /* UITableViewController+Common.swift in Sources */,
+				6F45A1B021D606E6001FF67A /* EmptyView.swift in Sources */,
 				6F45A1AA21D4BBB9001FF67A /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

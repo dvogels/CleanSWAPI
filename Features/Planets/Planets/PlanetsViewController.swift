@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Common
 
 protocol PlanetsViewControllerDelegate: class {
     
@@ -59,6 +60,20 @@ class PlanetsViewController : UITableViewController {
         delegate?.controllerWillDissappear(self)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        adjustFooterViewHeightToFillTableView()
+    }
+    
+    private lazy var loadingView: UIView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.style = .gray
+        activityIndicatorView.startAnimating()
+        
+        return activityIndicatorView
+    }()
+        
 }
 
 //MARK: - Methods
@@ -68,22 +83,13 @@ extension PlanetsViewController {
     func refresh() {
         switch viewModel.state {
         case .loading, .paging:
-            let loadingView = UIActivityIndicatorView()
-            loadingView.style = .gray
-            loadingView.startAnimating()
             tableView.tableFooterView = loadingView
         case .populated:
             tableView.tableFooterView = UIView()
         case .empty:
-            let emptyView = UIView()
-            emptyView.frame = tableView.frame
-            emptyView.backgroundColor = .blue
-            tableView.tableFooterView = emptyView
-        case .error(_):
-            let errorView = UIView()
-            errorView.backgroundColor = .red
-            errorView.frame = tableView.frame
-            tableView.tableFooterView = errorView
+            tableView.tableFooterView = EmptyView()
+        case .error(let error):
+            tableView.tableFooterView = ErrorView(error: error)
         }
         
         tableView.reloadData()
