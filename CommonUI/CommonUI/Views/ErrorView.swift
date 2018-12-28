@@ -10,14 +10,21 @@ import Foundation
 
 open class ErrorView : UIView {
     
-    let error: Error
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        
+        return label
+    }()
     
     public init(error: Error) {
-        self.error = error
-        
         super.init(frame: .zero)
         
-        backgroundColor = .red
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        titleLabel.text = error.localizedDescription
     }
     
     required public init?(coder aDecoder: NSCoder) {
