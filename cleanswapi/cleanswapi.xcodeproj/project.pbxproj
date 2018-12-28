@@ -18,6 +18,10 @@
 		6F0F035121CF821C000F1209 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F035021CF821C000F1209 /* Common.framework */; };
 		6F0F035221CF821C000F1209 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0F035021CF821C000F1209 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F0F035921CF8F55000F1209 /* AppCoordinator+Planets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035821CF8F55000F1209 /* AppCoordinator+Planets.swift */; };
+		6F45A1D521D61972001FF67A /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F45A1D221D61861001FF67A /* CommonUI.framework */; };
+		6F45A1D621D61972001FF67A /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F45A1D221D61861001FF67A /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6F45A1D821D61972001FF67A /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F45A1D721D61972001FF67A /* Model.framework */; };
+		6F45A1D921D61972001FF67A /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F45A1D721D61972001FF67A /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6F8B1BFF21D0CB800067C14A /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B1BFE21D0CB800067C14A /* Services.framework */; };
 		6F8B1C0021D0CB800067C14A /* Services.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B1BFE21D0CB800067C14A /* Services.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -30,8 +34,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6F0F033221CF7FEB000F1209 /* Planets.framework in Embed Frameworks */,
+				6F45A1D621D61972001FF67A /* CommonUI.framework in Embed Frameworks */,
 				6F8B1C0021D0CB800067C14A /* Services.framework in Embed Frameworks */,
 				6F0F035221CF821C000F1209 /* Common.framework in Embed Frameworks */,
+				6F45A1D921D61972001FF67A /* Model.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +57,8 @@
 		6F0F033721CF8111000F1209 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6F0F035021CF821C000F1209 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0F035821CF8F55000F1209 /* AppCoordinator+Planets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCoordinator+Planets.swift"; sourceTree = "<group>"; };
+		6F45A1D221D61861001FF67A /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F45A1D721D61972001FF67A /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1BFE21D0CB800067C14A /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30191F0C6CCCDCAC062B239 /* Pods-cleanswapi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cleanswapi.release.xcconfig"; path = "../Pods/Target Support Files/Pods-cleanswapi/Pods-cleanswapi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,7 +70,9 @@
 			files = (
 				6F0F033121CF7FEB000F1209 /* Planets.framework in Frameworks */,
 				6F8B1BFF21D0CB800067C14A /* Services.framework in Frameworks */,
+				6F45A1D521D61972001FF67A /* CommonUI.framework in Frameworks */,
 				6F0F035121CF821C000F1209 /* Common.framework in Frameworks */,
+				6F45A1D821D61972001FF67A /* Model.framework in Frameworks */,
 				319E63D946380A63D2A603E0 /* Pods_cleanswapi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +92,8 @@
 		6F0F02FD21CF7DF7000F1209 = {
 			isa = PBXGroup;
 			children = (
+				6F45A1D721D61972001FF67A /* Model.framework */,
+				6F45A1D221D61861001FF67A /* CommonUI.framework */,
 				6F0F030821CF7DF7000F1209 /* cleanswapi */,
 				6F0F030721CF7DF7000F1209 /* Products */,
 				6F0F035021CF821C000F1209 /* Common.framework */,

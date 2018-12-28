@@ -42,8 +42,8 @@
 			files = (
 				6F45A1CD21D60A2B001FF67A /* CommonUI.framework in Frameworks */,
 				6F8B1C1321D0D7990067C14A /* Model.framework in Frameworks */,
-				6F8B1C0F21D0D7140067C14A /* Services.framework in Frameworks */,
 				6F8B1C0921D0D2A30067C14A /* Common.framework in Frameworks */,
+				6F8B1C0F21D0D7140067C14A /* Services.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
