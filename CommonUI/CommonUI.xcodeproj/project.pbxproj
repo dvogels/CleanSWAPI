@@ -54,14 +54,30 @@
 		6F45A1BD21D6094C001FF67A /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
-				6F45A1CE21D60E38001FF67A /* StarWarsItemCell.swift */,
 				6F45A1BE21D6094C001FF67A /* CommonUI.h */,
 				6F45A1BF21D6094C001FF67A /* Info.plist */,
+				6F45A1D021D613FC001FF67A /* Cells */,
+				6F45A1D121D61417001FF67A /* Views */,
 				6F45A1CA21D6098B001FF67A /* UITableViewController+Common.swift */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		6F45A1D021D613FC001FF67A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6F45A1CE21D60E38001FF67A /* StarWarsItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6F45A1D121D61417001FF67A /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				6F45A1C821D60985001FF67A /* ErrorView.swift */,
 				6F45A1C621D60981001FF67A /* EmptyView.swift */,
 			);
-			path = CommonUI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
