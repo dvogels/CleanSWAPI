@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F89FDD921D62B6400C35A9B /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F89FDD821D62B6400C35A9B /* Model.framework */; };
 		6F8B1BDC21D0C9790067C14A /* Services.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8B1BDA21D0C9790067C14A /* Services.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F8B1BF821D0CAB10067C14A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1BF721D0CAB10067C14A /* APIClient.swift */; };
 		BFBBE2C26CF9718A7249EFA8 /* Pods_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B583BB6A4CB18A30DE2376 /* Pods_Services.framework */; };
@@ -15,6 +16,7 @@
 /* Begin PBXFileReference section */
 		0DB530A7094C93BAB0B8E483 /* Pods-Services.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Services.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Services/Pods-Services.debug.xcconfig"; sourceTree = "<group>"; };
 		21B583BB6A4CB18A30DE2376 /* Pods_Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F89FDD821D62B6400C35A9B /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1BD721D0C9790067C14A /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1BDA21D0C9790067C14A /* Services.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
 		6F8B1BDB21D0C9790067C14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F89FDD921D62B6400C35A9B /* Model.framework in Frameworks */,
 				BFBBE2C26CF9718A7249EFA8 /* Pods_Services.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +49,7 @@
 		46644EDAD6131E6503FF9EFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F89FDD821D62B6400C35A9B /* Model.framework */,
 				21B583BB6A4CB18A30DE2376 /* Pods_Services.framework */,
 			);
 			name = Frameworks;

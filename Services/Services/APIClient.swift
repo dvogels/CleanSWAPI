@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Model
 
 open class APIClient {
     
@@ -45,8 +46,7 @@ extension JSONDecoder {
         
         guard let responseData = response.data else {
             print("didn't get any data from API")
-            fatalError()
-            //return .failure(BackendError.parsing(reason: "Did not get data in response"))
+            return .failure(BackendError.noResponse)
         }
         
         do {
