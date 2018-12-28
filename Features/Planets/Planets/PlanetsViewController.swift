@@ -8,6 +8,7 @@
 
 import Foundation
 import CommonUI
+import Model
 
 protocol PlanetsViewControllerDelegate: class {
     
@@ -42,7 +43,7 @@ class PlanetsViewController : UITableViewController {
         self.navigationItem.title = "Planets"
         
         tableView.allowsSelection = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
+        tableView.register(StarWarsItemCell.self, forCellReuseIdentifier: StarWarsItemCell.identifier)
         
         viewModel.refreshHandler = { [weak self] in
             self?.refresh()
@@ -110,11 +111,13 @@ extension PlanetsViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        guard let starWarsCell = tableView.dequeueReusableCell(withIdentifier: StarWarsItemCell.identifier, for: indexPath) as? StarWarsItemCell else {
+            fatalError()
+        }
         
-        cell.textLabel?.text = viewModel.state.objects[indexPath.row].name
+        starWarsCell.item = viewModel.state.objects[indexPath.row]
         
-        return cell
+        return starWarsCell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -122,6 +125,20 @@ extension PlanetsViewController {
         if isLastRow {
             viewModel.loadNextPageWhenNeeded()
         }
+    }
+    
+}
+
+// MARK: - StarWarsItem
+
+extension Planet: StarWarsItem {
+    
+    public var title: String {
+        return self.name
+    }
+    
+    public var subtitle: String? {
+        return self.terrain
     }
     
 }

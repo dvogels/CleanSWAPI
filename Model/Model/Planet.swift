@@ -10,8 +10,10 @@ import Foundation
 
 public struct Planet: Decodable {
     public let name: String
+    public let terrain: String
     
-    public init(name: String) {
+    public init(name: String, terrain: String) {
         self.name = name
+        self.terrain = terrain
     }
 }

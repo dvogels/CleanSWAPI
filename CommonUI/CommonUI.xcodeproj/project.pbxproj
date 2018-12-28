@@ -11,6 +11,7 @@
 		6F45A1C721D60981001FF67A /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1C621D60981001FF67A /* EmptyView.swift */; };
 		6F45A1C921D60985001FF67A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1C821D60985001FF67A /* ErrorView.swift */; };
 		6F45A1CB21D6098B001FF67A /* UITableViewController+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1CA21D6098B001FF67A /* UITableViewController+Common.swift */; };
+		6F45A1CF21D60E38001FF67A /* StarWarsItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F45A1CE21D60E38001FF67A /* StarWarsItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6F45A1C621D60981001FF67A /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		6F45A1C821D60985001FF67A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		6F45A1CA21D6098B001FF67A /* UITableViewController+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Common.swift"; sourceTree = "<group>"; };
+		6F45A1CE21D60E38001FF67A /* StarWarsItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		6F45A1BD21D6094C001FF67A /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				6F45A1CE21D60E38001FF67A /* StarWarsItemCell.swift */,
 				6F45A1BE21D6094C001FF67A /* CommonUI.h */,
 				6F45A1BF21D6094C001FF67A /* Info.plist */,
 				6F45A1CA21D6098B001FF67A /* UITableViewController+Common.swift */,
@@ -143,6 +146,7 @@
 				6F45A1C721D60981001FF67A /* EmptyView.swift in Sources */,
 				6F45A1C921D60985001FF67A /* ErrorView.swift in Sources */,
 				6F45A1CB21D6098B001FF67A /* UITableViewController+Common.swift in Sources */,
+				6F45A1CF21D60E38001FF67A /* StarWarsItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
