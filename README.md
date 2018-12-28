@@ -26,6 +26,18 @@ In your terminal, go to the project directory
 gem install bundler
 ```
 
+- Install cocoapods if this gem is not installed yet :
+
+```
+gem install cocoapods
+```
+
+- Make sure all cocoapods are up 2 date :
+
+```
+pod repo update
+```
+
 - Install all gems locally in the vendor/bundle directory
 
 ```
