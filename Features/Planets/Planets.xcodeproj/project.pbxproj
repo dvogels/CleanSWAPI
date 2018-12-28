@@ -10,6 +10,7 @@
 		6F0F032A21CF7ECF000F1209 /* Planets.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0F032821CF7ECF000F1209 /* Planets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F0F035521CF8AA5000F1209 /* PlanetsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */; };
 		6F0F035721CF8B10000F1209 /* PlanetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */; };
+		6F45A1CD21D60A2B001FF67A /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F45A1CC21D60A2B001FF67A /* CommonUI.framework */; };
 		6F8B1C0221D0D1870067C14A /* PlanetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8B1C0121D0D1870067C14A /* PlanetsViewModel.swift */; };
 		6F8B1C0921D0D2A30067C14A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B1C0821D0D2A30067C14A /* Common.framework */; };
 		6F8B1C0F21D0D7140067C14A /* Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F8B1C0E21D0D7140067C14A /* Services.framework */; };
@@ -23,6 +24,7 @@
 		6F0F032921CF7ECF000F1209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0F035421CF8AA5000F1209 /* PlanetsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCoordinator.swift; sourceTree = "<group>"; };
 		6F0F035621CF8B10000F1209 /* PlanetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewController.swift; sourceTree = "<group>"; };
+		6F45A1CC21D60A2B001FF67A /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1C0121D0D1870067C14A /* PlanetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModel.swift; sourceTree = "<group>"; };
 		6F8B1C0421D0D1FF0067C14A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8B1C0621D0D25C0067C14A /* Services.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Services.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F45A1CD21D60A2B001FF67A /* CommonUI.framework in Frameworks */,
 				6F8B1C1321D0D7990067C14A /* Model.framework in Frameworks */,
 				6F8B1C0F21D0D7140067C14A /* Services.framework in Frameworks */,
 				6F8B1C0921D0D2A30067C14A /* Common.framework in Frameworks */,
@@ -80,6 +83,7 @@
 		6F8B1C0321D0D1FF0067C14A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F45A1CC21D60A2B001FF67A /* CommonUI.framework */,
 				6F8B1C1221D0D7990067C14A /* Model.framework */,
 				6F8B1C0E21D0D7140067C14A /* Services.framework */,
 				6F8B1C0A21D0D2B00067C14A /* Services.framework */,

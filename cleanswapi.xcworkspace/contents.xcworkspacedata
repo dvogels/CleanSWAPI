@@ -15,6 +15,9 @@
       location = "group:Common/Common.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:CommonUI/CommonUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Model/Model.xcodeproj">
    </FileRef>
    <FileRef

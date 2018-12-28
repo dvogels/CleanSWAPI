@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Common
+import CommonUI
 
 protocol PlanetsViewControllerDelegate: class {
     
