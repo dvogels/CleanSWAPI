@@ -88,7 +88,7 @@ extension PlanetsViewController {
         case .populated:
             tableView.tableFooterView = UIView()
         case .empty:
-            tableView.tableFooterView = EmptyView()
+            tableView.tableFooterView = EmptyView(title: "No Planets", description: "There are no planets available")
         case .error(let error):
             tableView.tableFooterView = ErrorView(error: error)
         }
