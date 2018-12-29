@@ -24,8 +24,6 @@ class PlanetsViewModel {
         }
     }
     
-    private var pages: [Page<Planet>] = []
-    
     //MARK: - Closures
     
     var refreshHandler: RefreshHandler = {}
@@ -54,14 +52,16 @@ extension PlanetsViewModel {
                                             return
                                         }
                                         
-                                        if loadedPage.hasResults {
-                                            s.pages.append(loadedPage)
-                                            s.state = .populated(s.pages)
-                                        } else if s.pages.count > 0 {
-                                            s.state = .populated(s.pages)
-                                        } else {
-                                            s.state = .empty
+                                        switch s.state {
+                                        case .loading:
+                                            s.state = loadedPage.hasResults ? .populated([loadedPage]) : .empty
+                                        case .paging(var pages):
+                                            pages.append(loadedPage)
+                                            s.state = .populated(pages)
+                                        default:
+                                            break
                                         }
+                    
             },
                                        failureHandler: { [weak self] error in
                                         guard let s = self else {
